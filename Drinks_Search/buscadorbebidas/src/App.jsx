@@ -1,7 +1,7 @@
 import { Container } from 'react-bootstrap';
 import Formulario from './components/Formulario';
 import { CategoriasProvider } from './context/CategoriaProvider';
-import { BebidasProvider } from './contextBebidasProvider';
+import { BebidasProvider } from './context/BebidasProvider';
 
 function App() {
 
