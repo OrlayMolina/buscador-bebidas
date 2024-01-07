@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Bebida = ({ bebida }) => {
 
-    const { handleModalClick } = useBebidas();
+    const { handleModalClick, handleBebidaIdClick } = useBebidas();
 
     return (
         <Col md={6} lg={3}>
@@ -25,6 +25,7 @@ const Bebida = ({ bebida }) => {
                         className='w-100 text-uppercase mt-2'
                         onClick={() => {
                             handleModalClick();
+                            handleBebidaIdClick(bebida.idDrink);
                         }}
                     >
                         Ver Receta
@@ -39,6 +40,7 @@ Bebida.propTypes = {
     bebida: PropTypes.shape({
         strDrinkThumb: PropTypes.string.isRequired,
         strDrink: PropTypes.string.isRequired,
+        idDrink: PropTypes.string.isRequired,
     }).isRequired,
 };
 
